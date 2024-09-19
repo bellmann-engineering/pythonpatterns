@@ -7,6 +7,9 @@ class Office:
     location: str
     max_empl_number : int
 
+    def get_abc(self):
+        return ""
+
 class Person:
     def __init__(self, name, birthdate):
         self.name = name
