@@ -26,7 +26,7 @@ class File(FileComponent):
 class Folder(FileComponent):
     def __init__(self, name):
         self.name = name
-        self.children = []
+        self.children = [] # FileCompontents
 
     def add(self, component):
         self.children.append(component)
