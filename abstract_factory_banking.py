@@ -54,6 +54,14 @@ class OnlineBankFactory(BankFactory):
     
     def create_credit_card(self) -> CreditCard:
         return VirtualCreditCard()
+    
+class HybridBankFactory(BankFactory):
+    def create_account(self) -> Account:
+        return TraditionalCheckingAccount()
+    
+    def create_credit_card(self) -> CreditCard:
+        return VirtualCreditCard()
+
 
 
 # Schritt 5: Client Code

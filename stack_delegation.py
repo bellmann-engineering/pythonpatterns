@@ -26,3 +26,5 @@ class Stack:
 
     def __str__(self):
         return str(self._stack)
+
+s1 = Stack()

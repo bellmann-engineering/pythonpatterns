@@ -13,7 +13,7 @@ class SimpleWindow(Window):
 
 # Basis-Dekorator für Fenster (Abstrakter Dekorator)
 class WindowDecorator(Window):
-    def __init__(self, window):
+    def __init__(self, window: Window):
         self._window = window
 
     def render(self):

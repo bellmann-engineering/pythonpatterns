@@ -2,7 +2,7 @@ from functools import wraps
 import time
 
 def log_execution_time(func):
-    # @wraps(func)
+    #@wraps(func)
     def wrapper(*args,**kwargs):
         start_time = time.time()
         result = func(*args,**kwargs)
@@ -19,4 +19,9 @@ def slow_function():
     time.sleep(2)
     return "fertig"
 
+@log_execution_time
+def fast_function(dauer):
+    time.sleep(dauer)
+
 slow_function()
+fast_function(0.1)

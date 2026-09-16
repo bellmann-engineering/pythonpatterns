@@ -1,5 +1,5 @@
 # Das Subject, das Benachrichtigungen verschickt
-class Store:
+class Store():
     def __init__(self):
         self.products = []
         self.observers = []
@@ -18,7 +18,7 @@ class Store:
             observer.update(product)
 
 # Das Observer Interface, welches von Kunden implementiert wird
-class Customer:
+class Customer():
     def __init__(self, name):
         self.name = name
 

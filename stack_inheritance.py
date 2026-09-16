@@ -19,3 +19,7 @@ class Stack(list):
 
     def size(self):
         return len(self)
+
+
+s1 = Stack()
+s1.push(10)

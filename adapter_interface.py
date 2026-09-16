@@ -9,7 +9,7 @@ class Thermometer(ABC):
 # Celsius-Thermometer, das korrekt funktioniert
 class CelsiusThermometer(Thermometer):
     def get_temperature(self):
-        return 37.0  # Beispiel für die Temperatur in Celsius
+        return "###"  # Beispiel für die Temperatur in Celsius
 
 # Fahrenheit-Thermometer, das keine Möglichkeit hat, Celsius direkt zu liefern
 class FahrenheitThermometer:

@@ -1,16 +1,26 @@
 # Definition der Haus-Klasse, die das Endprodukt darstellt
 class House:
-    def __init__(self):
-        self.doors = None
-        self.windows = None
-        self.roof = None
-        self.frames = None
+    def __init__(self, roof, doors = None, windows = None, frames = None):
+        self.doors = doors
+        self.windows = windows
+        self.roof = roof
+        self.frames = frames
 
     def __str__(self):
         return f"Haus: Türen: {self.doors}, Fenster: {self.windows}, Dach: {self.roof}, Rahmen: {self.frames}"
 
+
+h = House(
+    roof="Flachdach"
+    )
+
+    
+
 # Definition des HouseBuilder, der die schrittweise Erstellung des Hauses ermöglicht
 class HouseBuilder:
+
+    error_dict = {}
+
     def __init__(self):
         self.house = House()
 
@@ -20,7 +30,9 @@ class HouseBuilder:
         return self
 
     def with_windows(self, windows):
-        """Setzt die Anzahl der Fenster."""
+        if windows <= 1:
+            raise AttributeError("Fensteranzahl ungültig")
+        
         self.house.windows = windows
         return self
 
@@ -35,6 +47,9 @@ class HouseBuilder:
         return self
 
     def build(self):
+        if self.house.roof is None:
+            raise Exception("Ohne Dach gehts nicht")
+
         """Gibt das fertig erstellte Haus zurück."""
         return self.house
 

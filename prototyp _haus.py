@@ -70,3 +70,5 @@ if __name__ == "__main__":
     if house:
         house.size = 120  # Anpassung der Größe
         house.show_info()
+
+

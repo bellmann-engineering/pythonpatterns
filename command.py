@@ -78,7 +78,7 @@ class RemoteControl:
     def __init__(self):
         self.command_history = []
 
-    def set_command(self, command):
+    def set_command(self, command: Command):
         self.command = command
 
     def press_button(self):
